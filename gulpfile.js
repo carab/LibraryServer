@@ -1,18 +1,13 @@
 var gulp = require('gulp'),
-  nodemon = require('gulp-nodemon'),
-  plumber = require('gulp-plumber');
-  //livereload = require('gulp-livereload');
+    nodemon = require('gulp-nodemon');
 
 
 gulp.task('develop', function () {
-  //livereload.listen();
   nodemon({
     script: 'app.js',
     ext: 'js coffee ejs',
   }).on('restart', function () {
-    setTimeout(function () {
-      //livereload.changed(__dirname);
-    }, 500);
+
   });
 });
 
